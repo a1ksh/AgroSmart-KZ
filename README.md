@@ -1,158 +1,104 @@
-# 🌾 AgroSmart KZ
+# 🌾 AgroSmart KZ — AI-Powered Agricultural Analytics
 
-**AI-аналитика аграрных субсидий Казахстана**  
-Decentrathon 5.0 / AI in Agroanalytics
-
+**Strategic Monitoring of Agricultural Subsidies in Kazakhstan**  
 ---
 
-## 📦 Структура проекта
+## 👥 Team: Van Gogh
+Dedicated to bringing innovation and transparency to Kazakhstan's digital agriculture.
+---
 
+## 📊 Platform Overview
+AgroSmart KZ is a comprehensive analytical tool that leverages Machine Learning to ensure fair subsidy distribution, detect anomalies, and provide soil-based crop recommendations.
+
+### Dashboard Preview
+![Project Overview Page](image_65a900.png)
+*Dashboard Overview Interface*
+---
+
+## 📦 Project Structure
 ```
 AgroSmart_KZ/
-├── app.py               ← Главное приложение Streamlit
-├── config.py            ← Константы, регионы КЗ, культуры
-├── scoring_engine.py    ← Isolation Forest + XGBoost скоринг
-├── soil_analyzer.py     ← Анализ земли по фотографиям
-├── forecasting.py       ← Прогнозирование (ExponentialSmoothing)
-├── train_models.py      ← Скрипт обучения (запуск ОДИН РАЗ)
-├── requirements.txt     ← Зависимости
-├── data/                ← Папка для xlsx файла с данными ← СЮДА ПОМЕСТИТЕ ФАЙЛ
-├── models/              ← Сохранённые модели (создаётся автоматически)
-└── results/             ← Результаты анализа (создаётся автоматически)
+├── app.py                ← Main Streamlit application
+├── config.py             ← Constants, KZ regions, crop types
+├── scoring_engine.py     ← Isolation Forest + XGBoost scoring
+├── soil_analyzer.py      ← Soil analysis via photos
+├── forecasting.py        ← Forecasting (Exponential Smoothing)
+├── train_models.py       ← Training script (RUN ONCE)
+├── requirements.txt      ← Dependencies
+├── .env.example          ← Template for GEE credentials
+├── data/                 ← Place your subsidy XLSX file here
+├── models/               ← Saved ML models (auto-generated)
+└── results/              ← Analysis results (auto-generated)
 ```
 
 ---
 
-## 🚀 Пошаговый запуск
+## 🚀 Quick Start Guide
 
-### Шаг 1 — Создать виртуальное окружение
-
+### Step 1 — Setup Virtual Environment
 **Windows:**
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
 ```
-
 **macOS / Linux:**
 ```bash
-python -m venv .venv
 source .venv/bin/activate
 ```
 
-### Шаг 2 — Установить зависимости
-
+### Step 2 — Install Dependencies
 ```bash
+pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-> Установка займёт 2–5 минут. Убедитесь что pip обновлён:
-> `pip install --upgrade pip`
+### Step 3 — Configure Environment Variables
+1. Copy `.env.example` to `.env`.
+2. Add your **Google Earth Engine (GEE)** credentials:
+   - `GEE_SERVICE_ACCOUNT`
+   - `GEE_PRIVATE_KEY_PATH` (Path to your JSON key)
+   - `GEE_PROJECT_ID`
 
-### Шаг 3 — Положить данные
-
-Скопируйте ваш xlsx-файл с субсидиями в папку `data/`:
-
-```
-AgroSmart_KZ/
-└── data/
-    └── Выгрузка_по_выданным_субсидиям_2025.xlsx  ← сюда
-```
-
-### Шаг 4 — Обучить модели (ОДИН РАЗ)
-
+### Step 4 — Prepare Data & Train (RUN ONCE)
+Place your `subsidies_2025.xlsx` into the `data/` folder, then run:
 ```bash
 python train_models.py
 ```
+*Time: 1–3 minutes. This trains the ML models and caches results.*
 
-Этот скрипт:
-- Загружает данные из `data/`
-- Обучает Isolation Forest и XGBoost
-- Сохраняет модели в `models/`
-- Сохраняет обработанные данные в `results/`
-
-⏱ Время выполнения: **1–3 минуты**
-
-### Шаг 5 — Запустить приложение
-
+### Step 5 — Launch Application
 ```bash
 streamlit run app.py
 ```
-
-Браузер откроется автоматически: **http://localhost:8501**
-
----
-
-## 🔄 Повторный запуск
-
-После первого запуска `train_models.py` каждый следующий запуск приложения работает **мгновенно** — данные уже обработаны и закэшированы.
-
-Если данные изменились:
-1. Удалите `results/processed_data.csv`
-2. Снова запустите `python train_models.py`
+Access the dashboard at: **http://localhost:8501**
 
 ---
 
-## 📊 Возможности платформы
+## 🧠 Machine Learning Models
 
-| Страница | Функционал |
-|----------|-----------|
-| 📊 Дашборд | KPI метрики, статус заявок, динамика по месяцам |
-| 🗺️ Карта | Интерактивная bubble-карта Казахстана (17 облыс + 3 қала) |
-| 🎯 Скоринг | Isolation Forest аномалии + XGBoost Merit Score + шортлист |
-| 📈 Болжам | Прогноз заявок и сумм на 1–6 месяцев вперёд |
-| 📸 Жер анализі | Загрузка фото земли → тип почвы → рекомендации культур |
-
----
-
-## 🧠 ML Модели
-
-- **Isolation Forest** — детекция аномальных/мошеннических заявок (~3% contamination)
-- **XGBoost** — вероятность исполнения заявки на основе исторических данных
-- **Merit Score** — многофакторная оценка (история успеха + масштаб + приоритет направления + опыт − штраф)
-- **Exponential Smoothing (Holt-Winters)** — прогнозирование временных рядов
-- **Soil Classifier** — цветовой + текстурный анализ изображений (PIL + NumPy)
+| Model | Purpose |
+|-------|---------|
+| **Isolation Forest** | Detects anomalous/fraudulent applications (~3% contamination). |
+| **XGBoost** | Predicts the probability of application fulfillment. |
+| **Merit Score** | Multi-factor ranking (Success history + Scale + Priority). |
+| **Holt-Winters** | Time-series forecasting for subsidy volumes (1–6 months). |
+| **Soil Classifier** | Computer Vision (PIL + NumPy) to identify soil types from photos. |
 
 ---
 
-## 🇰🇿 Регионы Казахстана (данные на 2025 г.)
-
-17 областей + 3 города республиканского значения:
-
-```
-Акмолинская, Актюбинская, Алматинская, Атырауская,
-Восточно-Казахстанская, Жамбылская, Жетысуская,
-Западно-Казахстанская, Карагандинская, Костанайская,
-Кызылординская, Мангистауская, Павлодарская,
-Северо-Казахстанская, Туркестанская, Улытауская, область Абай
-+ г. Астана, г. Алматы, г. Шымкент
-```
+## 🛠 Features
+*   **📊 Dashboard:** KPI metrics, application statuses, monthly dynamics.
+*   **🗺️ Interactive Map:** Bubble-map of 17 regions and 3 major cities of Kazakhstan.
+*   **🎯 Smart Scoring:** Fraud detection and merit-based shortlisting.
+*   **📸 Soil Analysis:** Upload a soil photo → Get type & crop recommendations.
 
 ---
 
-## ⚙️ Системные требования
-
-- Python 3.9+
-- RAM: минимум 4 GB (рекомендуется 8 GB для полного датасета 36K строк)
-- Интернет: нужен при первом запуске для загрузки шрифтов карты
+## ⚖️ License
+This project is licensed under the **MIT License**.
 
 ---
 
-## 🐛 Частые проблемы
-
-**Ошибка "No module named 'xgboost'"**
-```bash
-pip install xgboost
-```
-
-**Карта не отображается**
-Нужен интернет для загрузки OpenStreetMap тайлов.
-
-**xlsx не читается**
-Убедитесь что файл не открыт в Excel. Попробуйте `skiprows=0` в `train_models.py`.
-
-**Ошибка SHAP**
-SHAP опционален. Если не устанавливается: `pip install shap --no-build-isolation`
-
----
+> **"ЗАҢ МЕН ТӘРТІП"**
 
 **Made with 💚 for Kazakhstan's Digital Agriculture**
