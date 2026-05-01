@@ -8,7 +8,7 @@
 | :--- | :--- | :--- |
 | **Albina Gibadullina** | Project Manager & Team Lead | [● GitHub](https://github.com/albina0dali) |
 | **Karlygash Aibolatkyzy** | ML Engineer & Backend Developer | [● GitHub](https://github.com/a1ksh) |
-| **Asem Abdikarim** | Data Scientist | [● GitHub](https://github.com/assem-a7) |
+| **Assem Abdikarim** | Data Scientist | [● GitHub](https://github.com/assem-a7) |
 | **Aruzhan Serikpaeva** | Frontend Developer | [● GitHub](https://github.com/Mevinss) |
 ---
 ## 📂 Documentation
