@@ -19,6 +19,15 @@ AgroSmart KZ is a comprehensive analytical tool that leverages Machine Learning 
 ![Dashboard Preview](Overview%20Interface.png)
 
 ---
+## 📥 Large Files (Datasets & Pre-trained Models)
+Due to GitHub's file size limits, large binary files such as trained models (`.pth`, `.pkl`) and the full dataset are hosted on Google Drive.
+
+[![Google Drive](https://img.shields.io/badge/Google%20Drive-Download%20Large%20Files-orange?logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/11yi8rJtEdJ74aQjcg6PpNFtLwBPbu8IR?usp=sharing)
+
+**Instructions:**
+1. Download the contents of the folder.
+2. Place the model files into the `/models` directory.
+3. Place the dataset files into the `/data` directory.
 
 ## 📦 Project Structure
 ```
