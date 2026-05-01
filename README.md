@@ -11,7 +11,7 @@ Dedicated to bringing innovation and transparency to Kazakhstan's digital agricu
 AgroSmart KZ is a comprehensive analytical tool that leverages Machine Learning to ensure fair subsidy distribution, detect anomalies, and provide soil-based crop recommendations.
 
 ### Dashboard Preview
-![Project Overview Page](image_65a900.png)
+![Project Overview Page](Overview Interface.png)
 *Dashboard Overview Interface*
 ---
 
