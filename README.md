@@ -4,7 +4,6 @@
 ---
 
 ## 👥 Team: Van Gogh
-Name	Role	Socials
 | Name | Role | Socials |
 | :--- | :--- | :--- |
 | **Albina Gibadullina** | Project Manager & Team Lead | [● GitHub](https://github.com/albina0dali) |
