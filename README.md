@@ -11,6 +11,8 @@
 | **Asem Abdikarim** | Data Scientist | [● GitHub](https://github.com/assem-a7) |
 | **Aruzhan Serikpaeva** | Frontend Developer | [● GitHub](https://github.com/Mevinss) |
 ---
+## 📂 Documentation
+📄 [Download Presentation PDF](https://github.com/a1ksh/AgroSmart-KZ/releases/download/v1.0.0/Van.Gogh.pdf)
 
 ## 📊 Platform Overview
 AgroSmart KZ is a comprehensive analytical tool that leverages Machine Learning to ensure fair subsidy distribution, detect anomalies, and provide soil-based crop recommendations.
