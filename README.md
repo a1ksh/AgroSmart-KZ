@@ -4,14 +4,20 @@
 ---
 
 ## 👥 Team: Van Gogh
-Dedicated to bringing innovation and transparency to Kazakhstan's digital agriculture.
+Name	Role	Socials
+| Name | Role | Socials |
+| :--- | :--- | :--- |
+| **Albina Gibadullina** | Project Manager & Team Lead | [● GitHub](https://github.com/albina0dali) |
+| **Karlygash Aibolatkyzy** | ML Engineer & Backend Developer | [● GitHub](https://github.com/a1ksh) |
+| **Asem Abdikarim** | Data Scientist | [● GitHub](https://github.com/assem-a7) |
+| **Aruzhan Serikpaeva** | Frontend Developer | [● GitHub](https://github.com/Mevinss) |
 ---
 
 ## 📊 Platform Overview
 AgroSmart KZ is a comprehensive analytical tool that leverages Machine Learning to ensure fair subsidy distribution, detect anomalies, and provide soil-based crop recommendations.
 
 ### Dashboard Preview
-![Project Overview Page](Overview Interface.png)
+![Project Overview Page](image_65a900.png)
 *Dashboard Overview Interface*
 ---
 
