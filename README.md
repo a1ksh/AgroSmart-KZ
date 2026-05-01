@@ -17,7 +17,7 @@ AgroSmart KZ is a comprehensive analytical tool that leverages Machine Learning 
 
 ### Dashboard Preview
 ![Project Overview Page](image_65a900.png)
-*Dashboard Overview Interface*
+
 ---
 
 ## 📦 Project Structure
