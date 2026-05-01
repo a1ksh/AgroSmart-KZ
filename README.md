@@ -1,4 +1,4 @@
-# 🌾 AgroSmart KZ — AI-Powered Agricultural Analytics
+# 🌾 AgroSmart KZ - AI-Powered Agricultural Analytics
 
 **Strategic Monitoring of Agricultural Subsidies in Kazakhstan**  
 ---
@@ -111,7 +111,7 @@ Access the dashboard at: **http://localhost:8501**
 ---
 
 ## ⚖️ License
-This project is licensed under the **MIT License**.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
